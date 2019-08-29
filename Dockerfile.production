@@ -1,0 +1,12 @@
+FROM python:3.7
+
+WORKDIR /block-producers-directory-telegram-bot
+COPY . /block-producers-directory-telegram-bot
+
+ENV PYTHONPATH="$PYTHONPATH:/block-producers-directory-telegram-bot/src"
+
+RUN pip3 install \
+  -r /block-producers-directory-telegram-bot/requirements.txt \
+  -r /block-producers-directory-telegram-bot/requirements-production.txt
+
+CMD ["/bin/bash", "/block-producers-directory-telegram-bot/ops/deployment/heroku.sh"]
