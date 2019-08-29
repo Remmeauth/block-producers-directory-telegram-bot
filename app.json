@@ -1,0 +1,24 @@
+{
+  "name": "block-producers-directory-telegram-bot",
+  "description": "Block producers directory Telegram bot.",
+  "website": "https://remme.io",
+  "repository": "https://github.com/Remmeauth/block-producers-directory-telegram-bot",
+  "env": {
+    "ENVIRONMENT": {
+      "description": "Environment value. For now, is used for detect review applications only.",
+      "required": false
+    },
+    "TELEGRAM_BOT_TOKEN": {
+      "description": "Telegram bot token.",
+      "required": true
+    },
+    "DATABASE_URL": {
+      "description": "Databsae to store information about users.",
+      "required": false
+    },
+    "PRODUCTION_HOST": {
+      "description": "Server host, which runs bot. For instance, `https://bps-directory-telebot-staging.herokuapp.com`.",
+      "required": true
+    }
+  }
+}
